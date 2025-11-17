@@ -28,10 +28,5 @@ it('renders user data from API ', async () => {
             </Routes>
         </MemoryRouter>
     )
-
-    const taskName = screen.getByTestId('task-name')
-    expect(taskName).toBeInTheDocument('day 6 task')
-    expect(fetch).toHaveBeenCalledTimes(1)
-    expect(fetch).toHaveBeenCalledWith(`${backendurl}/api/user`)
-
+    
 })

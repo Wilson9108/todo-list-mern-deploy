@@ -1,6 +1,6 @@
 
-let {userRouter}  = require('./routers/user')
 let express = require('express')
+let {userRouter}  = require('./routers/user')
 let app = express()
 let cors = require('cors')
 app.use(express.json())

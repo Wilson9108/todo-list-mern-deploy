@@ -28,9 +28,8 @@
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "D:/pixamountTasks/Day5--08-11-2025/backend/tests/dbsetup.js"
+      "D:/pixamountTasks/Day12--17-11-2025/backend/tests/dbsetup.js"
     ],
-    "testEnvironment": "node",
-    "testTimeout": 100000
+    "testEnvironment": "node"
   }
 }

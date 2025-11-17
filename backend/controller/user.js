@@ -33,6 +33,7 @@ async function updateTask(req,res){
         res.status(500).json({message:"Internal Server Error"})
     }
 }
+
 //update task
 async function completeTask(req,res){
     try{
@@ -47,6 +48,7 @@ async function completeTask(req,res){
         res.status(500).json({message:"Internal Server Error"})
     }
 }
+
 //delete task
 async function deleteTask(req,res){
     try{
@@ -80,6 +82,7 @@ async function getPendingTasks(req,res){
         res.status(500).json({message:'Internal Server Error'})
     }
 }
+
 //get completed tasks
 async function getCompletedTasks(req,res){
     try{
