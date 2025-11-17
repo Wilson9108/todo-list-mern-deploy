@@ -32,6 +32,8 @@ jobs:
         run_install: false
     - name: Install dependencies
       run: pnpm install     
+      working-directory: todo-backend
     - name: Test
       run : pnpm test
+      working-directory: todo-backend
 
