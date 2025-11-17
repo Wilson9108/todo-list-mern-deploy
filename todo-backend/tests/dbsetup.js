@@ -1,11 +1,18 @@
-const mongoose = require('mongoose')
-let {dbConnect} = require('../config/dbConnect')
+const mongoose = require("mongoose");
+const { MongoMemoryServer } = require("mongodb-memory-server");
 
-beforeAll(async()=>{
-    await dbConnect("mongodb://127.0.0.1:27017/todo_test")
-})
+let mongo;
 
-afterAll(async ()=>{
-    //  await mongoose.connection.dropDatabase()
-    await mongoose.connection.close()
-})
+beforeAll(async () => {
+    mongo = await MongoMemoryServer.create();
+    const uri = mongo.getUri();
+
+    await mongoose.connect(uri);
+});
+
+afterAll(async () => {
+        await mongoose.connection.dropDatabase();
+        await mongoose.connection.close();
+        await mongo.stop();
+
+});
