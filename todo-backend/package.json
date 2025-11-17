@@ -28,7 +28,7 @@
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "D:/pixamountTasks/Day12--17-11-2025/todo-backend/tests/dbsetup.js"
+      "<rootDir/>/tests/dbsetup.js"
     ],
     "testEnvironment": "node"
   }
