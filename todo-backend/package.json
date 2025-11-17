@@ -28,7 +28,7 @@
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "<rootDir/>/tests/dbsetup.js"
+      "<rootDir>/tests/dbsetup.js"
     ],
     "testEnvironment": "node"
   }
