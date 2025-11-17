@@ -70,7 +70,7 @@ function AddTask({fetchTasks}) {
                 <form className="w-[500px] p-4 bg-gray-900 shadow-xl pb-15  rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl relative"  onSubmit={handleValidation}>
                     <h1 className="text-3xl text-center mb-3 tracking-widest font-bold text-indigo-400  border-b-8 border-amber-400 inline-block border-dotted border-off pb-2">Todo App</h1>
                     <div>
-                        <input type="text" data-testid="task-name" value={taskName} name="taskname" placeholder="Enter Task" onChange={(e) => setTaskName(e.target.value)} className="border-2 text-white w-full mt-2 px-1 py-3 border-pink-400 rounded outline-amber-500 focus:rounded-full" />
+                        <input type="text" data-testid="task-name" value={taskName} name="taskname" placeholder="Enter Today Task" onChange={(e) => setTaskName(e.target.value)} className="border-2 text-white w-full mt-2 px-1 py-3 border-pink-400 rounded outline-amber-500 focus:rounded-full" />
                         <p className='text-red-900'>{taskNameError}</p>
                     </div>
                     <div>
