@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import AddTask from './AddTask'
 import TaskData from './TaskData'
 import PendingTasks from './PendingTasks'
@@ -27,7 +27,7 @@ function Routers() {
     return (
         <>
             <div>
-                <BrowserRouter>
+                <HashRouter>
                     <Navbar />
                     <Routes>
                         <Route path='/' element={<AddTask taskData={taskData} fetchTasks={fetchTasks} />}></Route>
@@ -35,7 +35,7 @@ function Routers() {
                         <Route path='/pending-tasks' element={<PendingTasks />}></Route>
                         <Route path='/completed-tasks' element={<CompletedTasks />}></Route>
                     </Routes>
-                </BrowserRouter>
+                </HashRouter>
 
             </div>
         </>
