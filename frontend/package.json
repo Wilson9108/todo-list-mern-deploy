@@ -13,7 +13,6 @@
     "test:ui": "vitest --ui",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-    
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
