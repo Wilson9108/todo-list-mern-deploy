@@ -3,7 +3,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 const navigation = [
   { name: 'Create Task', to: '/', current: true },
-  { name: 'Tasks', to: 'alltasks', current: false },
+  { name: 'All Tasks', to: 'alltasks', current: false },
   { name: 'Pending-Tasks', to: 'pending-tasks', current: false },
   { name: 'Completed Tasks', to: 'completed-tasks', current: false }
 ]
