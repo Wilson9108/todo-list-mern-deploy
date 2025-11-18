@@ -1,12 +1,12 @@
-import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react'
-import { describe, it, expect, vi, beforeEach } from 'vitest'
-import AddTask from '../components/AddTask';
+// import React from 'react';
+import { render } from '@testing-library/react'
+import {  it, vi } from 'vitest'
+// import AddTask from '../components/AddTask';
 import TaskData from '../components/TaskData';
-import Routers from '../components/Routers'
-import App from '../App'
+// import Routers from '../components/Routers'
+// import App from '../App'
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-let backendurl = import.meta.env.VITE_BACKEND_URL
+// let backendurl = import.meta.env.VITE_BACKEND_URL
 
 vi.stubGlobal('fetch', vi.fn())
 

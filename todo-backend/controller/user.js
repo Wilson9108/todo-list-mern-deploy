@@ -11,7 +11,7 @@ async function createTask(req,res){
         }else{
             res.status(400).json({message:"Task Not Creation "})
         }
-    }catch(e){
+    }catch(_e){
         console.error(e.message)
         res.status(500).json({message:"Internal Server Error"})
     }
@@ -29,7 +29,7 @@ async function updateTask(req,res){
         }else{
             res.status(400).json({message:"Task is not updated"})
         }
-    }catch(e){
+    }catch(_e){
         res.status(500).json({message:"Internal Server Error"})
     }
 }
@@ -44,7 +44,7 @@ async function completeTask(req,res){
         }else{
             res.status(400).json({message:"Operation Failed"})
         }
-    }catch(e){
+    }catch(_e){
         res.status(500).json({message:"Internal Server Error"})
     }
 }
@@ -59,7 +59,7 @@ async function deleteTask(req,res){
         }else{
             res.status(400).json({message:"Task is not Deleted"})
         }
-    }catch(e){
+    }catch(_e){
         res.status(500).json({message:"Internal Server Error"})
     }
 }
@@ -78,7 +78,7 @@ async function getPendingTasks(req,res){
     try{
         let tasks = await user.find({status:0});
         res.status(200).json(tasks)
-    }catch(e){
+    }catch(_e){
         res.status(500).json({message:'Internal Server Error'})
     }
 }
@@ -89,7 +89,7 @@ async function getCompletedTasks(req,res){
         let tasks = await user.find({status:1});
         res.status(200).json(tasks)
 
-    }catch(e){
+    }catch(_e){
         res.status(500).json({message:'Internal Server Error'})
     }
 }

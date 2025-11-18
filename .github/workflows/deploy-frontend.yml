@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # <-- Give permission to push to gh-pages
+      contents: write   
 
     strategy:
       matrix:
