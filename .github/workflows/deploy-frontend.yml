@@ -40,8 +40,8 @@ jobs:
         working-directory: frontend
       - name: Copy Docs Folder
         run: |
-          mkdir -p frontend/dist/docs
-          cp -R docs/* frontend/dist/docs/
+          mkdir -p frontend/dist/swagger-docs
+          cp -R docs/* frontend/dist/swagger-docs/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
