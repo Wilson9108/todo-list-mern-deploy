@@ -38,6 +38,10 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: frontend
+      - name: Copy Docs Folder
+        run: |
+          mkdir -p frontend/dist/docs
+          cp -R docs/* frontend/dist/docs/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
