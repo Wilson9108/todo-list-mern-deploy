@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x, 22.x, 24.x]
+        node-version: [20.x, 22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -41,7 +41,8 @@ jobs:
       - name: Copy Docs Folder
         run: |
           mkdir -p frontend/dist/swagger-docs
-          cp -R docs/* frontend/dist/swagger-docs/
+          cp -R swagger-docs/* frontend/dist/swagger-docs/
+
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
