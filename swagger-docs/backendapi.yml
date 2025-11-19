@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+  title: User CRUD API
+  version: 1.0.0
+  description: API documentation for User creation, update, delete and get all users.
+
+servers:
+  - url: http://localhost:2025/api
+
+paths:
+  /user:
+    post:
+      summary: Create a new user
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+      responses:
+        "201":
+          description: User Created Successfully
+        "400":
+          description: User Not Creation
+        "500":
+          description: Internal Server Error
+
+    get:
+      summary: Get all users
+      tags:
+        - User
+      responses:
+        "200":
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "500":
+          description: Internal Server Error
+
+  /user/{id}:
+    put:
+      summary: Update user by ID
+      tags:
+        - User
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+      responses:
+        "200":
+          description: User is Updated
+        "400":
+          description: User is not updated
+        "500":
+          description: Internal Server Error
+
+    delete:
+      summary: Delete user by ID
+      tags:
+        - User
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: User is Deleted
+        "400":
+          description: user is not Deleted
+        "500":
+          description: Internal Server Error
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
